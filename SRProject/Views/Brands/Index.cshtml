@@ -1,0 +1,13 @@
+﻿@model List<SRProject.Models.Brand>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@foreach(var item in Model)
+            {
+                <p>@item.BrandName</p>
+            }
