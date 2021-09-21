@@ -7,7 +7,21 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-@foreach(var item in Model)
-            {
-                <p>@item.BrandName</p>
-            }
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Brand Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.BrandName</td>
+            <td>@item.Description</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
